@@ -13,7 +13,7 @@ namespace HomeWork10
 
         static void ShowSelect()
         {
-            Console.Write($"Выберите меню: ");
+            Console.WriteLine($"{GetCommandList().userName}. Выберите меню: ");
             foreach (ICommand cmd in GetCommandList())
             {
                 Console.Write($"{cmd.GetName()} ");
@@ -23,15 +23,12 @@ namespace HomeWork10
 
         static void ShowWelcome()
         {
-            Console.WriteLine("Добро пожаловать");
+            Console.WriteLine($"{GetCommandList().userName}. Добро пожаловать");
         }
 
         static void FakeSelect()
         {
-            if (GetCommandList().userName == "")
-                Console.WriteLine("Вы ошиблись при наборе команды.");
-            else
-                Console.WriteLine($"{GetCommandList().userName}, вы ошиблись при наборе команды.");
+            Console.WriteLine($"{GetCommandList().userName}. Вы ошиблись при наборе команды.");
         }
 
         static void ExecuteCommand(string cmdLine)

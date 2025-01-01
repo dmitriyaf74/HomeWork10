@@ -14,18 +14,21 @@ namespace HomeWork10.Classes
         public void Execute(string cmdLine)
         {
             if (this.cmdList.TaskList.Count == 0)
-                Console.WriteLine("Нет ни одной задачи");
+                Console.WriteLine($"{this.cmdList.userName}. Нет ни одной задачи");
             else
             {
                 ICommand? cmd = this.cmdList.FindCommand("/showtasks");
-                Console.WriteLine("Выберите задачу для удаления:");
+                Console.WriteLine($"{this.cmdList.userName}. Выберите задачу для удаления:");
                 cmd.Execute("");
                 string s = Console.ReadLine();
                 int i;
                 if (int.TryParse(s, out i))
                 {
                     if (i < this.cmdList.TaskList.Count)
+                    {
                         this.cmdList.TaskList.RemoveAt(i);
+                        Console.WriteLine($"Задача {i} удалена");
+                    }
                     else
                         Console.WriteLine("Указан неверный номер задачи");
                 }

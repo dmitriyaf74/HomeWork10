@@ -14,7 +14,7 @@ namespace HomeWork10.Classes
         public void Execute(string cmdLine)
         {
             if (this.cmdList.TaskList.Count == 0)
-                Console.WriteLine("Нет ни одной задачи");
+                Console.WriteLine($"{this.cmdList.userName}. Нет ни одной задачи");
             else
             for (int i = 0; i < this.cmdList.TaskList.Count; i++)
             {

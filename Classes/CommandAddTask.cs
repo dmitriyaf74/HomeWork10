@@ -16,7 +16,7 @@ namespace HomeWork10.Classes
             string taskName = "";
             while (taskName == "")
             {
-                Console.WriteLine("Введите описание задачи");
+                Console.WriteLine($"{this.cmdList.userName}. Введите описание задачи");
                 taskName = Console.ReadLine();
             }
             this.cmdList.TaskList.Add(taskName);

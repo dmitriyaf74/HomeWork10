@@ -30,31 +30,21 @@ namespace HomeWork10.Classes
                     this.cmdList.Add(new CommandAddTask(this.cmdList));
                     this.cmdList.Add(new CommandRemoveTask(this.cmdList));
                 }
-                Console.WriteLine($"{this.cmdList.userName}, добро пожаловать");
+                Console.WriteLine($"{this.cmdList.userName}, чем могу помочь?");
             }
             else
-                DeleteUserCommands();
-        }
-        public void DeleteUserCommands()
-        {
-            for (int i = this.cmdList.Count - 1; i >= 0 ; i--)
             {
-                if (this.cmdList[i].GetName() == "/echo")
-                {
-                    this.cmdList.RemoveAt(i);
-                    break;
-                }
-                if (this.cmdList[i].GetName() == "/addtask")
-                {
-                    this.cmdList.RemoveAt(i);
-                    break;
-                }
-                if (this.cmdList[i].GetName() == "/showtasks")
-                {
-                    this.cmdList.RemoveAt(i);
-                    break;
-                }
-                if (this.cmdList[i].GetName() == "/removetask")
+                DeleteUserCommand("/echo");
+                DeleteUserCommand("/addtask");
+                DeleteUserCommand("/showtasks");
+                DeleteUserCommand("/removetask");
+            }
+        }
+        public void DeleteUserCommand(string cmdName)
+        {
+            for (int i = this.cmdList.Count - 1; i >= 0; i--)
+            {
+                if (this.cmdList[i].GetName() == cmdName)
                 {
                     this.cmdList.RemoveAt(i);
                     break;
