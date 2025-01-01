@@ -16,11 +16,11 @@ namespace HomeWork10.Classes
             string taskName = "";
             while (taskName == "")
             {
-                Console.WriteLine($"{this.cmdList.userName}. Введите описание задачи");
+                Console.WriteLine($"{this.cmdList.userName}. Пожалуйста, введите описание задачи:");
                 taskName = Console.ReadLine();
             }
             this.cmdList.TaskList.Add(taskName);
-            Console.WriteLine($"Задача {taskName} добавлена");
+            Console.WriteLine($"Задача \"{taskName}\" добавлена");
         }
 
         public string GetName()

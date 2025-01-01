@@ -30,7 +30,7 @@ namespace HomeWork10.Classes
                     this.cmdList.Add(new CommandAddTask(this.cmdList));
                     this.cmdList.Add(new CommandRemoveTask(this.cmdList));
                 }
-                Console.WriteLine($"{this.cmdList.userName}, чем могу помочь?");
+                Console.WriteLine($"Привет, {this.cmdList.userName}, чем могу помочь?");
             }
             else
             {

@@ -18,7 +18,7 @@ namespace HomeWork10.Classes
             else
             for (int i = 0; i < this.cmdList.TaskList.Count; i++)
             {
-                Console.WriteLine($"{i}-{this.cmdList.TaskList[i]} ");
+                Console.WriteLine($"{i}. {this.cmdList.TaskList[i]} ");
             }
         }
 
